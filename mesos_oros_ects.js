@@ -7,6 +7,7 @@
 // @version     1.1
 // @grant       none
 // @date        21.06.2014
+// @updateURL    https://openuserjs.org/install/nohponex/httpsgithub.comNohponeXmesos_oros_ects/mesos_oros_ects.user.js
 // ==/UserScript==
 
 //Include jQuery if not included
