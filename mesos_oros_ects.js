@@ -50,6 +50,9 @@ if (typeof jQuery == 'undefined') {
 function mesos_oros_ects() {
     //Get all tr with course data
     var items = $('#mainTable>tbody>tr:nth-child(2) table>tbody>tr[height="25"]:not(.italicHeader)');
+    if( !items ){
+        return;
+    }
     var sum = 0;
     var passed = 0;
     var total_ECTS = 0;
