@@ -6,6 +6,8 @@
 // @version     1
 // @grant       none
 // ==/UserScript==
+
+//Include jQuery if not included
 if (typeof jQuery == 'undefined') {
     if (typeof $ == 'function') {
         // warning, global var
@@ -33,13 +35,16 @@ if (typeof jQuery == 'undefined') {
             // Super failsafe - still somehow failed...
         } else {
             // jQuery loaded! Make sure to use .noConflict just in case
-            f();
+            mesos_oros_ects();
         }
     });
 } else {
-    f();
+    mesos_oros_ects();
 };
-function f() {
+
+//Main function
+function mesos_oros_ects() {
+    //Get all tr with course data
     var items = $('#mainTable>tbody>tr:nth-child(2) table>tbody>tr[height="25"]:not(.italicHeader)');
     var sum = 0;
     var passed = 0;
@@ -48,9 +53,11 @@ function f() {
     for (var i = 0, l = items.length; i < l; ++i) {
         var item = $(items[i]);
         var ECTS = parseInt($.trim(item.children('td') [5].innerHTML));
-        var grade = $.trim($(item.children('td') [6]) .children('span') [0].innerHTML) .replace(',', '.');
+        var grade = $.trim($(item.children('td') [6]) .children('span')[0].innerHTML) .replace(',', '.');
+        //If grade is numberic
         if ($.isNumeric(grade)) {
             grade = parseFloat(grade);
+            //If grade is 
             if (grade >= 5) {
                 total += grade * ECTS;
                 total_ECTS += ECTS;
