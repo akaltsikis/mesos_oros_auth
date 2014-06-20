@@ -4,7 +4,7 @@
 // @author      NohponeX
 // @description Υπολογισμός (νέου) μέσου όρου βάση των μονάδων ECTS στην ιστοσελίδα του ITC για το auth.gr
 // @include     https://sw*.eng.auth.gr/unistudent/stud_CResults.asp?studPg=1*
-// @version     2
+// @version     1.1
 // @grant       none
 // @date        21.06.2014
 // ==/UserScript==
