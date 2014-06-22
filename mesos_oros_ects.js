@@ -68,11 +68,11 @@ function average_calculation(){
                 total += grade * ECTS;
                 total_ECTS += ECTS;
                 sum += grade;
-                ++passed;
+                ++passed_courses;
             }
         }
     }
-    var mean = Math.round( ( sum / passed ) * 100 ) / 100;
+    var mean = Math.round( ( sum / passed_courses ) * 100 ) / 100;
     
     var mean_ects = Math.round( ( total / total_ECTS ) * 100 ) / 100;
     
