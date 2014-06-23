@@ -3,7 +3,7 @@ mesos_oros_ects
 Υπολογισμός (νέου) μέσου όρου βάση των μονάδων ECTS στην ιστοσελίδα του ITC για το auth.gr
 
 ### Εγκατάσταση με Greasemonkey για Firefox ή Tampermonkey για Chrome ###
-https://openuserjs.org/libs/nohponex/mesos_oros_ects
+https://openuserjs.org/scripts/nohponex/mesos_oros_ects
 
 ### Εναλλακτικά μέσω κονσόλας σε Firefox και Chrome ###
 **Έχοντας ανοιχτή τη σελίδα των βαθμολογιών στo itc, αντιγράψτε τον κώδικα :**
