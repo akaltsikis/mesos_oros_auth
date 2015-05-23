@@ -9,9 +9,7 @@ https://openuserjs.org/scripts/nohponex/mesos_oros_ects
 **Έχοντας ανοιχτή τη σελίδα των βαθμολογιών στo itc, αντιγράψτε τον κώδικα :**
 
 ```javascript
-
-function getScript(e,t){var n=document.createElement("script");n.src=e;var r=document.getElementsByTagName("head")[0],i=false;n.onload=n.onreadystatechange=function(){if(!i&&(!this.readyState||this.readyState=="loaded"||this.readyState=="complete")){i=true;t();n.onload=n.onreadystatechange=null;r.removeChild(n)}};r.appendChild(n)}function average_calculation(){var e=$('#mainTable>tbody>tr:nth-child(2) table>tbody>tr[height="25"]:not(.italicHeader)');if(!e){return}var t=0;var n=0;var r=0;var i=0;for(var s=0,o=e.length;s<o;++s){var u=$(e[s]);var a=parseInt($.trim(u.children("td")[5].innerHTML));var f=$.trim($(u.children("td")[6]).children("span")[0].innerHTML).replace(",",".");if($.isNumeric(f)){f=parseFloat(f);if(f>=5){i+=f*a;r+=a;t+=f;++n}}}var l=Math.round(t/n*100)/100;var c=Math.round(i/r*100)/100;var h=$('#mainTable>tbody>tr:nth-child(2) table>tbody>tr[height="20"]:last > td:last > b');if(!h){alert("Νέος Μέσος Όρος (ECTS) :"+c)}else{h.append(' Νέος Μέσος Όρος (ECTS) : <span class="error">'+c+"</span>")}}if(typeof jQuery=="undefined"){getScript("//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js",average_calculation)}else{average_calculation()}
-
+!function(){var e=function(){var e=document.querySelectorAll('#mainTable>tbody>tr:nth-child(2) table>tbody>tr[height="25"]:not(.italicHeader)');if(e){for(var t=0,r=0,a=0,l=0,n=0,o=e.length;o>n;++n){var i=e[n],d=parseInt(i.querySelectorAll("td")[5].innerHTML.trim()),c=i.querySelectorAll("td")[6].querySelectorAll("span")[0].innerHTML.trim().replace(",",".");isNaN(c)||(c=parseFloat(c),c>=5&&(l+=c*d,a+=d,t+=c,++r))}var h=(Math.round(t/r*100)/100,Math.round(l/a*100)/100),u=document.querySelector('#mainTable>tbody>tr:nth-child(2) table>tbody>tr[height="20"] > td:last-of-type > b');u?u.insertAdjacentHTML("beforeend",' Νέος Μέσος Όρος (ECTS) : <span class="error">'+h+"</span>"):alert("Νέος Μέσος Όρος (ECTS) :"+h)}};e()}();
 ```
 
 
