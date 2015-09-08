@@ -5,7 +5,7 @@
 // @description Υπολογισμός (νέου) μέσου όρου βάση των μονάδων ECTS στην ιστοσελίδα του ITC για το auth.gr
 // @include     https://sw*.eng.auth.gr/unistudent/stud_CResults.asp?studPg=1*
 // @include     https://sweng.it.auth.gr/unistudent/stud_CResults.asp*
-// @version     1.3
+// @version     1.4
 // @grant       none
 // @date        23.05.2015
 // @updateURL   https://openuserjs.org/install/nohponex/httpsgithub.comNohponeXmesos_oros_ects/mesos_oros_ects.user.js
