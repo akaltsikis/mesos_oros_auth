@@ -2,13 +2,14 @@
 // @name        mesos_oros_ects
 // @namespace   https://github.com/NohponeX/mesos_oros_ects
 // @author      NohponeX
-// @description Υπολογισμός (νέου) μέσου όρου βάση των μονάδων ECTS στην ιστοσελίδα του ITC για το auth.gr
+// @description Created for students of Electrical & Computer Engineering — AUTh, Υπολογισμός (νέου) μέσου όρου βάση των μονάδων ECTS στην ιστοσελίδα του ITC για το auth.gr
 // @include     https://sw*.eng.auth.gr/unistudent/stud_CResults.asp?studPg=1*
 // @include     https://sweng.it.auth.gr/unistudent/stud_CResults.asp*
 // @version     1.5
 // @grant       none
 // @date        23.05.2015
 // @updateURL   https://raw.githubusercontent.com/NohponeX/mesos_oros_ects/master/mesos_oros_ects.user.js
+// @run-at document-end
 // ==/UserScript==
 
 (function(){
