@@ -1,5 +1,7 @@
 mesos_oros_ects
 ===============
+_Created for students of Electrical & Computer Engineering — AUTh_
+
 Υπολογισμός (νέου?) μέσου όρου βάση των μονάδων ECTS στην ιστοσελίδα του ITC για το auth.gr
 
 ### Εγκατάσταση με Greasemonkey για Firefox ή Tampermonkey για Chrome ###
