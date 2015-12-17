@@ -2,10 +2,10 @@
 // @name        mesos_oros_ects
 // @namespace   https://github.com/nohponex/mesos_oros_ects
 // @author      nohponex
+// @contributor ioantsaf
 // @description Created for students of Electrical & Computer Engineering — AUTh, Υπολογισμός (νέου) μέσου όρου βάση των μονάδων ECTS στην ιστοσελίδα του ITC για το auth.gr
-// @include     https://sw*.eng.auth.gr/unistudent/stud_CResults.asp?studPg=1*
-// @include     https://sweng.it.auth.gr/unistudent/stud_CResults.asp*
-// @version     1.5
+// @include     https://sis.auth.gr/new/all_grades*
+// @version     2.0
 // @grant       none
 // @date        23.05.2015
 // @updateURL   https://raw.githubusercontent.com/nohponex/mesos_oros_ects/master/mesos_oros_ects.user.js
@@ -18,7 +18,7 @@
    */
   var average_calculation = function(){
     //Get all tr with course data
-    var items = document.querySelectorAll('#mainTable>tbody>tr:nth-child(2) table>tbody>tr[height="25"]:not(.italicHeader)');
+    var items = document.querySelectorAll('#adminTable3>tbody>tr');
     if(!items){//If not found exit the function 
       return;
     }
@@ -33,8 +33,8 @@
       var item = items[i];
       //Parse ECTS FROM 5th td
       var ECTS = parseInt(item.querySelectorAll('td')[5].innerHTML.trim());
-      //Parse grade FROM 6th td
-      var grade = item.querySelectorAll('td')[6].querySelectorAll('span')[0].innerHTML.trim().replace(',', '.');
+      //Parse grade FROM 8th td
+      var grade = item.querySelectorAll('td')[8].innerHTML.trim();
       //If grade is numeric
       if (!isNaN(grade)) {
         grade = parseFloat(grade);
@@ -52,12 +52,12 @@
     var mean_ects = Math.round((total / total_ECTS) * 100) / 100;
     
     //Get the information's row
-    var result_tr = document.querySelector('#mainTable>tbody>tr:nth-child(2) table>tbody>tr[height="20"] > td:last-of-type > b');
+    var result_tr = document.querySelector('h3:last-child');
     
     if (!result_tr) { //If not found alert the result
       alert('Νέος Μέσος Όρος (ECTS) :' + mean_ects);
     } else { //Add result to the end of the element
-      result_tr.insertAdjacentHTML('beforeend', ' Νέος Μέσος Όρος (ECTS) : <span class="error">' + mean_ects + '</span>');
+      result_tr.insertAdjacentHTML('beforeend', ' Νέος Μέσος Όρος (ECTS) : <b>' + mean_ects + '</b>');
     }
   };
   average_calculation();
