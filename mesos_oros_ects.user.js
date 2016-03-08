@@ -31,8 +31,8 @@
     //For every course;  
     for (var i = 0, l = items.length; i < l; ++i) {
       var item = items[i];
-      //Parse ECTS FROM 5th td
-      var ECTS = parseInt(item.querySelectorAll('td')[5].innerHTML.trim());
+      //Parse ECTS FROM 7th td - Syntelestis
+      var ECTS = parseInt(item.querySelectorAll('td')[7].innerHTML.trim());
       //Parse grade FROM 8th td
       var grade = item.querySelectorAll('td')[8].innerHTML.trim();
       //If grade is numeric
